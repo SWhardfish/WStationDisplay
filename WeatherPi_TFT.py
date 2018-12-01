@@ -149,7 +149,7 @@ Wind_Path = ICON_PATH + 'wind.png'
 Rain_Path = ICON_PATH + 'rainindicator.png'
 
 WUndergroundLogo_Path = ICON_PATH + 'wundergroundLogo.png'
-graph_path = 'graphdir/Graph1Live.png'
+graph_path = 'Graph1Live.png'
 
 CONNECTION_ERROR = True
 REFRESH_ERROR = True
@@ -333,7 +333,7 @@ class Update:
     @staticmethod
     def graph_layer():
         logging.info('Update GraphLayerLog')
-        thread = threading.Timer(10, Update.graph_layer)
+        thread = threading.Timer(120, Update.graph_layer)
         thread.start()
         threads.append(thread)
 
@@ -376,7 +376,7 @@ class Update:
     @staticmethod
     def graph_image():
         logging.info('Update GraphImageLog')
-        thread = threading.Timer(10, Update.graph_image)
+        thread = threading.Timer(600, Update.graph_image)
         thread.start()
         threads.append(thread)
 
